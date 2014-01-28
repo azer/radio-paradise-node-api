@@ -1,6 +1,6 @@
 ## radio-paradise-node-api
 
-Radio Paradise API written in NodeJS
+Now Playing API For Radio Paradise
 
 ## Install
 
