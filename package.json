@@ -1,0 +1,24 @@
+{
+  "name": "radio-paradise-api",
+  "version": "0.0.0",
+  "description": "Radio Paradise API written in NodeJS",
+  "main": "index.js",
+  "bin": {
+    "radio-paradise-server": "./bin/radio-paradise-server"
+  },
+  "repository": {
+    "url": "git@github.com:azer/radio-paradise-node-api.git",
+    "type": "git"
+  },
+  "author": "Azer Koçulu <azer@kodfabrik.com>",
+  "license": "BSD",
+  "dependencies": {
+    "circle": "0.0.6",
+    "scrape-url": "0.0.1",
+    "debug": "~0.7.4",
+    "level-json-cache": "0.0.0",
+    "optimist": "~0.6.0",
+    "default-debug": "0.0.0",
+    "strip": "0.0.6"
+  }
+}

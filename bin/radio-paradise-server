@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var opt = require('optimist');
+
+var argv = opt
+      .options('port', { alias: 'p' })
+      .options('hostname', { alias: 'h' })
+      .options('version', { alias: 'v' })
+      .options('help', { alias: 'h' })
+      .argv;
+
+require("default-debug")('circle:server');
+
+if (argv.version) require('show-version');
+if (argv.help) require('show-help');
+
+process.on('uncaughtException', function(err) {
+  console.error('Uncaught Error:', err.message);
+  console.error(err.stack);
+});
+
+require('../').start(argv.port || 3000, argv.hostname || '0.0.0.0');
