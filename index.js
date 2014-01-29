@@ -1,8 +1,7 @@
 var debug = require("debug")('radio-paradise');
 var circle = require("circle");
 var scrape = require("scrape-url");
-var strip = require("strip");
-var memoize = require('memoize-with-leveldb')('data-songs');
+var memoize = require('memoize-with-leveldb')('./data-songs');
 var nowplaying = memoize(pull, '90 seconds');
 
 module.exports = circle({
