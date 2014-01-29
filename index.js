@@ -18,10 +18,10 @@ function pull (callback) {
   scrape('http://www.radioparadise.com/ajax_rp2_playlist.php', '.song_title', function (error, links) {
     if (error) return callback(error);
 
-    links = links.filter(isJustText)
+    links = links.reverse().filter(isJustText)
       .map(function (el) {
         return el.innerHTML.replace(/<[^>]+>/g, '');
-      }).reverse();
+      });
 
     callback(undefined, links);
   });
