@@ -19,6 +19,7 @@
     "level-json-cache": "0.0.0",
     "optimist": "~0.6.0",
     "default-debug": "0.0.0",
-    "strip": "0.0.6"
+    "strip": "0.0.6",
+    "memoize-with-leveldb": "0.0.1"
   }
 }
