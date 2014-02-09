@@ -1,9 +1,8 @@
 var debug = require("debug")('radio-paradise');
 var circle = require("circle");
 var scrape = require("scrape-url");
-var memoize = require('memoize-with-leveldb')('./data-songs');
-
-var nowplaying = memoize(pull, '90 seconds');
+var memoize = require('memoize-with-leveldb')('data-songs');
+var nowplaying = memoize(pull, '10 seconds');
 
 module.exports = circle({
   '/': home
@@ -21,7 +20,7 @@ function pull (callback) {
 
     links = links.reverse().filter(isJustText)
       .map(function (el) {
-        return el.innerHTML.replace(/<[^>]+>/g, '');
+        return el.html().replace(/<[^>]+>/g, '');
       });
 
     callback(undefined, links);

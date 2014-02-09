@@ -14,7 +14,7 @@
   "license": "BSD",
   "dependencies": {
     "circle": "0.0.6",
-    "scrape-url": "0.0.1",
+    "scrape-url": "1.0.0",
     "debug": "~0.7.4",
     "level-json-cache": "0.0.0",
     "optimist": "~0.6.0",
